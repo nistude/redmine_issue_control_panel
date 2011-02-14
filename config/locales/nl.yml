@@ -1,0 +1,5 @@
+nl:
+  label_issue_change_status: "Verander status"
+  label_issue_change_assigned: "Opnieuw toewijzen"
+  label_issue_remove_assignee: "Verwijder huidige toewijzing"
+  label_issue_edit: "Bewerk"

@@ -1,6 +1,6 @@
 = redmine_issue_control_panel
 
-switch issue statuses from sidebar - without opening the Update screen.
+Switch issue statuses and assignees from sidebar - without opening the Update screen.
 
 Credits:
 Authors: Konstantin Zaitcev (kos@axmor.com), Alexandr Poplavsky (poplavsky@axmor.com)

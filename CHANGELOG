@@ -1,0 +1,15 @@
+0.2.0 (16-08-2010) - Tested against Redmine 1.0.0
+    * Feature: Added functionality to allow removal of issue assignee when current issues assignee is set only.
+    * Fix: Changed the direct links for one-click issue status changes and assignee assignments to be compatible with Redmine 1.0.0.
+    * Fix: Removed the planning header in the sidebar and reordered the plugins additions below the old planning links (as in stock Redmine 1.0.0).
+    * Enhancement: Made some small code markup enhancements (replaced tabs with spaces, removed superfluous spaces, etc.).
+    * Enhancement: Made all the used text-strings i18n'able and added English stubs for Russian language.
+    * Enhancement: Added up-to-date translation for the Dutch language.
+    * Task: Added CHANGELOG file
+    * Task: Added CONTRIBUTORS file
+
+0.1.0 (21-05-2010) - Tested against Redmine 0.9.4
+    * Feature: Added functionality to allow issue assignment to available project members from the sidebar in a similar manner.
+
+0.0.3 (07-05-2010) - Tested against Redmine 0.9.2
+    Initial public release of the plugin featuring the issue statuses switch functionality in the sidebar.

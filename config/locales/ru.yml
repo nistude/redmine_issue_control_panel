@@ -1,3 +1,5 @@
 ru:
-    label_issue_change_status: "Изменить статус"
-    label_issue_change_assigned: "Переназначить"
+  label_issue_change_status: "Изменить статус"
+  label_issue_change_assigned: "Переназначить"
+  label_issue_remove_assignee: "Remove current assignee"
+  label_issue_edit: "Edit"
