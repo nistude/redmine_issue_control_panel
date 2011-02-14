@@ -1,0 +1,9 @@
+table.issue_control_panel_reassign img.gravatar {
+	float: left;
+	margin-right: 2px;
+}
+
+div.issue_control_panel_scroll {
+	overflow: auto;
+	height: 200px;
+}
