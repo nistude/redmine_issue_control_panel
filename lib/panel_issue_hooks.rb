@@ -17,7 +17,7 @@ class PanelIssueHooks < Redmine::Hook::ViewListener
     back = request.env['HTTP_REFERER']
 
     if (issue_id)
-      issue = Issue.find(issue_id, :include => [:status])
+      issue = Issue.includes(:status).find(issue_id)
       if (issue)
         if (User.current.allowed_to?(:edit_issues, project))
           o = ''
@@ -44,7 +44,20 @@ class PanelIssueHooks < Redmine::Hook::ViewListener
             assignables.each do |u|
               if (u != issue.assigned_to)
                 o << '<tr><td>'
-		# no more gravatar, but fatal error disappear too :)
+                options = {:size => "14", :style => "float: left; margin-right: 2px;"}
+                av = if Setting.gravatar_enabled?
+                  options.merge!({:ssl => (request && request.ssl?), :default => Setting.gravatar_default})
+                  email = nil
+                  if u.respond_to?(:mail)
+                    email = u.mail
+                  elsif u.to_s =~ %r{<(.+?)>}
+                    email = $1
+                  end
+                  gravatar(email.to_s.downcase, options) unless email.blank? rescue ''
+                else
+                  ''
+                end
+                o << av unless av.nil?
                 o << link_to(u.name, {:controller => 'issues', :action => 'update', :id => issue, :issue => {:assigned_to_id => u}, :back_to => "/issues/show/"+issue_id, :authenticity_token => form_authenticity_token(request.session)}, :method => :put)
                 o << '</td></tr>'
               end
