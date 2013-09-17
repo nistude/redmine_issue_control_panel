@@ -44,7 +44,7 @@ class PanelIssueHooks < Redmine::Hook::ViewListener
             assignables.each do |u|
               if (u != issue.assigned_to)
                 o << '<tr><td>'
-								# no more gravatar, but fatal error disappear too :)
+		# no more gravatar, but fatal error disappear too :)
                 o << link_to(u.name, {:controller => 'issues', :action => 'update', :id => issue, :issue => {:assigned_to_id => u}, :back_to => "/issues/show/"+issue_id, :authenticity_token => form_authenticity_token(request.session)}, :method => :put)
                 o << '</td></tr>'
               end
