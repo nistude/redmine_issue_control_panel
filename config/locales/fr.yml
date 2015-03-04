@@ -1,0 +1,5 @@
+fr:
+  label_issue_change_status: "Changer le status"
+  label_issue_change_assigned: "Réassigner"
+  label_issue_remove_assignee: "Supprimer l'assignation actuelle"
+  label_issue_edit: "Editer"
